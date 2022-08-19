@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 
 * {
   margin: 0;
@@ -42,6 +43,12 @@ header{
   top: 0;
 }
 
+.container {
+  max-width: 1440px;
+  margin: auto;
+  padding: 21px 40px;
+}
+
 .nav-list {
   list-style: none;
   display: flex;
@@ -66,22 +73,18 @@ header{
   transform: scaleX(1);
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5.5px 40px;
+}
+
 .logo {
   cursor: pointer;
   color: #a45cff;
-  font-size: 40px;
-  }
-
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .container {
-    max-width: 1440px;
-    margin: auto;
-    padding: 18px 40px;
+  font-size: 35px;
+  font-family: 'Bungee', cursive;
   }
 
 #home {
@@ -92,36 +95,35 @@ header{
 #sobre {
   background: #1F075C;
   height: 100vh;
-  }
+}
 
-  #skills {
-    background: #100331;
-    height: 100vh;
-  }
+#skills {
+  background: #100331;
+  height: 100vh;
+}
   
-  #projetos {
-    background: #1F075C;
-    height: 100vh;
-    }
+#projetos {
+  background: #1F075C;
+  height: 100vh;
+}
 
-    footer {
-      width: 100%;
-      height: 100px;
-      background: #100331;
-    }
+footer {
+  width: 100%;
+  background: #100331;
+}
 
-    .footer-flex{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.footer-flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    footer div .icons {
-      display:flex;
-      gap:20px;
-    }
+footer div .icons {
+  display: flex;
+  gap: 20px;
+}
 
-    .detalhe-footer {
-      height: 20px;
-      background: #A45CFF;
-    }
+.detalhe-footer {
+  height: 15px;
+  background: #A45CFF;
+}
