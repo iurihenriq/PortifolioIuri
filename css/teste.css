@@ -51,6 +51,38 @@ header{
   position: relative;
 }
 
+
+/* .nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.nav-list li a{
+  transition: all 0.3s ease 0s;
+}
+
+.nav-list li a::after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid #A45CFF;
+  margin-top: 5px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-list li a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5.5px 40px;
+} */
+
 .logo {
   cursor: pointer;
   color: #a45cff;
@@ -132,7 +164,7 @@ max-width: 100%;
 }
 
 .conteudo-sobre .foto {
-  background-image: url(../assets/detalhe-sobre.svg);
+  background-image: url(../img/detalhe-sobre.svg);
   background-position: center;
   background-repeat: no-repeat;
   padding: 100px 200px;
@@ -192,6 +224,14 @@ footer {
   height: 15px;
   background: #A45CFF;
 }
+/* 
+.conteudo-home .apresentacao {
+  position: absolute;
+  right: 370px;
+  top: 242px;
+} */
+
+
 
 .conteudo-home .apresentacao p{
   font-size: 35px;
@@ -224,25 +264,34 @@ footer {
 
 .conteudo-home #detalhe-direto-home{
   position: absolute;
-  top: 580px;
+  top: 450px;
   right: -195px;
 }
 
 .conteudo-home #detalhe-inferior-home{
   position: absolute;
   top: 600px;
-  right: 950px;
+  right: 250px;
 }
 
 .conteudo-home #detalhe-superior-home{
   position: absolute;
   top: 1px;
-  right: 840px;
+  right: -2800px;
 }
 
 .imagem {
   z-index: 10;
+  position: relative;
 }
+
+.imagem #person{
+  z-index: 10;
+  position: absolute;
+  top: -400px;
+  right: -60px;
+}
+
 
 .conteudo-home .efeito {
   filter: blur(9px);
@@ -371,6 +420,13 @@ footer {
       letter-spacing: 2px;
   }
 }
+
+/* header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background: rgba(30, 0, 58, 0.8);
+} */
 
 nav {
   padding: 0 15%;

@@ -6,48 +6,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portifólio Iuri Henrique</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
 </head>
 
 <body>
   <header>
-    <div class="container navbar">
+    <nav class="container" data-menu="suave">
       <a href="#home" class="logo">‹IH/›</a>
-      <nav class="nav-list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-      </nav>
-    </div>
+      <button data-menu="button" aria-controls="menu"></button>
+      <ul data-menu="list" id="menu">
+        <a href="#home">
+          <li>Home</li>
+        </a>
+        <a href="#sobre">
+          <li>Sobre</li>
+        </a>
+        <a href="#skills">
+          <li>Skills</li>
+        </a>
+        <a href="#projetos">
+          <li>Projetos</li>
+        </a>
+      </ul>
+    </nav>
   </header>
 
   <main>
     <section id="home">
       <div class="container conteudo-home">
+
         <div class="apresentacao">
           <div class="quem-sou">
-          <p>Olá, eu sou o</p>
-          <p>Iuri Henrique</p>
-          <p>Desenvolvedor Front-end</p>
+            <p>Olá, eu sou o</p>
+            <p>Iuri Henrique</p>
+            <p>Desenvolvedor Front-end</p>
           </div>
           <div class="botoes">
             <a href="#projetos">Projetos</a>
-            <a href="https://github.com/iurihenriq"><img src="./img/Github.svg" alt=""></a> 
-            <a href="https://www.linkedin.com/in/iuri-henrique/"><img src="./img/LinkedIn.svg" alt=""></a> 
-            <a href="mailto:iurinhg2@gmail.com"><img src="./img/Gmail.svg" alt=""></a> 
+            <a href="https://github.com/iurihenriq" target="_blank"><img src="./assets/Github.svg" alt=""></a>
+            <a href="https://www.linkedin.com/in/iuri-henrique/" target="_blank"><img src="./assets/LinkedIn.svg" alt=""></a>
+            <a href="mailto:iurinhg2@gmail.com" target="_blank"><img src="./assets/Gmail.svg" alt=""></a>
           </div>
         </div>
-        
-        <img src="./img/person.png" id="person">
-        <img src="./img/detalhe-direito-home.svg" id="detalhe-direto-home" class="efeito">
-        <img src="./img/detalhe-inferior-home.svg" id="detalhe-inferior-home" class="efeito">
-        <img src="./img/detalhe-superior-home.svg" id="detalhe-superior-home" class="efeito">
+        <div class="imagem">
+          <img src="./assets/person.png" id="person">
+        </div>
+        <a href="#sobre" class="botao-scroll">
+          <svg class="arrows">
+            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+          </svg>
+        </a>
+
+        <img src="./assets/detalhe-direito-home.svg" id="detalhe-direto-home" class="efeito">
+        <img src="./assets/detalhe-inferior-home.svg" id="detalhe-inferior-home" class="efeito">
+        <img src="./assets/detalhe-superior-home.svg" id="detalhe-superior-home" class="efeito">
       </div>
     </section>
 
     <section id="sobre">
-      <div class="container">
+      <div class="container conteudo-sobre">
+        <div class="foto">
+          <img src="./assets/eu.png" alt="">
+        </div>
+        <div class="sobre-mim">
+          <h2>Um pouco sobre mim</h2>
+          <p>Tenho como objetivo aplicar minha formação de analista e desenvolvedor de sistemas na criação de soluções testáveis e de fácil entendimento. E, também, desenvolver minha carreira sob a supervisão e o estímulo da empresa, me comprometendo com as boas práticas e a inovação.
+          </p>
+          <div class="botoes-sobre-mim">
+            <a href="./assets/curriculo.pdf" download><img src="./assets/nuvem.png" alt="">Curriculo</a>
+            <a href="https://www.linkedin.com/in/iuri-henrique/" target="_blank"><img src="./assets/icon-linkedin.svg" alt="">LinkedIn</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -64,16 +95,18 @@
     <footer>
       <div class="container footer-flex">
         <div class="icons">
-          <a href="https://github.com/iurihenriq"><img src="./img/Github.svg" alt=""></a> 
-          <a href="https://www.linkedin.com/in/iuri-henrique/"><img src="./img/LinkedIn.svg" alt=""></a> 
+          <a href="https://github.com/iurihenriq" target="_blank"><img src="./assets/Github.svg" alt=""></a>
+          <a href="https://www.linkedin.com/in/iuri-henrique/" target="_blank"><img src="./assets/LinkedIn.svg" alt=""></a>
         </div>
         <p>Desenvolvido por <span>Iuri Henrique</span></p>
         <p>iurinhg2@gmail.com</p>
       </div>
       <div class="detalhe-footer"></div>
     </footer>
-    
+
   </main>
+
+  <script src="./script.js"></script>
 </body>
 
 </html>
