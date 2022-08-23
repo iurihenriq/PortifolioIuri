@@ -34,7 +34,6 @@
   <main>
     <section id="home">
       <div class="container conteudo-home">
-
         <div class="apresentacao">
           <div class="quem-sou">
             <p>Olá, eu sou o</p>
@@ -43,13 +42,13 @@
           </div>
           <div class="botoes">
             <a href="#projetos">Projetos</a>
-            <a href="https://github.com/iurihenriq" target="_blank"><img src="./assets/Github.svg" alt=""></a>
-            <a href="https://www.linkedin.com/in/iuri-henrique/" target="_blank"><img src="./assets/LinkedIn.svg" alt=""></a>
-            <a href="mailto:iurinhg2@gmail.com" target="_blank"><img src="./assets/Gmail.svg" alt=""></a>
+            <a href="https://github.com/iurihenriq" target="_blank" class="botoes-sociais"><img src="./assets/Github.svg" alt=""></a>
+            <a href="https://www.linkedin.com/in/iuri-henrique/" target="_blank" class="botoes-sociais"><img src="./assets/LinkedIn.svg" alt=""></a>
+            <a href="mailto:iurinhg2@gmail.com" target="_blank" class="botoes-sociais"><img src="./assets/Gmail.svg" alt=""></a>
           </div>
         </div>
-        <div class="imagem">
-          <img src="./assets/person.png" id="person">
+        <div class="imagem-person">
+          <img src="./assets/person.png">
         </div>
         <a href="#sobre" class="botao-scroll">
           <svg class="arrows">
@@ -58,20 +57,26 @@
             <path class="a3" d="M0 40 L30 72 L60 40"></path>
           </svg>
         </a>
-
-        <img src="./assets/detalhe-direito-home.svg" id="detalhe-direto-home" class="efeito">
-        <img src="./assets/detalhe-inferior-home.svg" id="detalhe-inferior-home" class="efeito">
-        <img src="./assets/detalhe-superior-home.svg" id="detalhe-superior-home" class="efeito">
       </div>
+
+      <img src="./assets/detalhe-direito-home.svg" id="detalhe-direto-home" class="efeito">
+      <img src="./assets/detalhe-inferior-home.svg" id="detalhe-inferior-home" class="efeito">
+      <img src="./assets/detalhe-superior-home.svg" id="detalhe-superior-home" class="efeito">
     </section>
 
     <section id="sobre">
       <div class="container conteudo-sobre">
-        <div class="foto">
-          <img src="./assets/eu.png" alt="">
+        <div class="background-foto">
+          <div class="container-foto">
+            <img src="./assets/eu.png" alt="" class="eu">
+          </div>
+          <div class="background">
+            <img src="./assets/detalhe-sobre.svg" id="detalhe-sobre" class="efeito">
+          </div>
         </div>
+
         <div class="sobre-mim">
-          <h2>Um pouco sobre mim</h2>
+          <h2>Sobre mim</h2>
           <p>Tenho como objetivo aplicar minha formação de analista e desenvolvedor de sistemas na criação de soluções testáveis e de fácil entendimento. E, também, desenvolver minha carreira sob a supervisão e o estímulo da empresa, me comprometendo com as boas práticas e a inovação.
           </p>
           <div class="botoes-sobre-mim">
