@@ -58,6 +58,7 @@ header {
   color: #a45cff;
   font-size: 35px;
   font-family: "Bungee", cursive;
+  padding-left: 30px;
 }
 
 #home {
@@ -127,12 +128,12 @@ header {
 
 .arrows path.a2 {
   animation-delay: -0.5s;
-  -webkit-animation-delay: -0.5s; 
+  -webkit-animation-delay: -0.5s;
 }
 
 .arrows path.a3 {
   animation-delay: 0s;
-  -webkit-animation-delay: 0s; 
+  -webkit-animation-delay: 0s;
 }
 
 #sobre {
@@ -148,14 +149,14 @@ header {
   padding: 5% 10%;
 }
 
-.background-foto{
+.background-foto {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.background{
-  position:absolute;
+.background {
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
@@ -168,27 +169,6 @@ header {
 .sobre-mim {
   text-align: justify;
 }
-
-@media screen and (max-width: 1350px){
-  .sobre-mim {
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 1024px){
-  .conteudo-sobre {
-    display: block;
-    padding: 20% 10%;
-    
-  }
-  .sobre-mim {
-    padding-top: 150px;
-    width: 100%;
-
-  }
-}
-
-
 
 .efeito {
   width: 100%;
@@ -211,12 +191,12 @@ header {
 .conteudo-sobre .botoes-sobre-mim {
   display: flex;
   align-content: center;
-  gap: 35px;
+  gap: 25px;
   margin-top: 35px;
 }
 
 .conteudo-sobre .botoes-sobre-mim a {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   background: #a45cff;
   border-radius: 30px;
   padding: 8px 40px;
@@ -233,12 +213,12 @@ header {
   width: 15%;
 }
 
-.conteudo-sobre .sobre-mim h2{
-  font-size: 2.4rem;
+.conteudo-sobre .sobre-mim h2 {
+  font-size: clamp(1rem, 9vw, 2.4rem);
 }
 
-.conteudo-sobre .sobre-mim p{
-  font-size: 1.4rem;
+.conteudo-sobre .sobre-mim p {
+  font-size: clamp(1rem, 6vw, 1.4rem);
 }
 
 #skills {
@@ -280,20 +260,20 @@ footer {
 }
 
 .conteudo-home .apresentacao p {
-  font-size: 2.43rem;
+  font-size: clamp(1rem, 8vw, 2.43rem);
   line-height: 1.1;
 }
 
 .conteudo-home .apresentacao p:nth-child(2) {
-  font-size: 4.8rem;
+  font-size: clamp(1rem, 16vw, 4.8rem);
   color: #a45cff;
 }
 
-.conteudo-home .botoes a:nth-child(1) {
-  font-size: 1.4rem;
+.conteudo-home .botoes #projetos-button {
+  font-size: 1.2rem;
   background: #a45cff;
   border-radius: 30px;
-  padding: 13px 43px;
+  padding: 13px 48px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 300;
@@ -305,12 +285,15 @@ footer {
   justify-content: center;
   gap: 20px;
   margin-top: 40px;
+  flex-wrap: wrap;
 }
 
 .conteudo-home .botoes-sociais {
   line-height: 0;
-  width: 57px;
-  height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 #home #detalhe-direto-home {
@@ -342,7 +325,7 @@ footer {
   max-width: 100%;
 }
 
- .efeito {
+.efeito {
   filter: blur(9px);
   -webkit-animation: pulsing 3s infinite;
   animation: pulsing 3s infinite;
@@ -400,7 +383,73 @@ footer {
   display: none;
 }
 
-@media (max-width: 880px) {
+nav {
+  padding: 0 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  transition: 0.3s;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  margin: 10px 30px;
+}
+
+nav ul li::after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid #a45cff;
+  margin-top: 5px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav ul li:hover::after {
+  transform: scaleX(1);
+}
+
+@media screen and (max-width: 1350px) {
+  .sobre-mim {
+    width: 50%;
+  }
+  .conteudo-sobre .botoes-sobre-mim {
+    display: flex;
+    justify-content: space-around;
+  }
+  .conteudo-sobre .botoes-sobre-mim {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .conteudo-sobre {
+    display: block;
+    padding: 20% 10%;
+  }
+
+  .logo {
+    padding: 0;
+  }
+
+  .sobre-mim {
+    padding-top: 20%;
+    width: 100%;
+  }
+
+  .imagem-person img {
+    display: none;
+  }
+
+  #home .conteudo-home {
+    justify-content: center;
+  }
+
   nav {
     padding: 0 5% !important;
   }
@@ -462,33 +511,63 @@ footer {
   }
 }
 
-nav {
-  padding: 0 15%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 80px;
-  transition: 0.3s;
-}
+@media (max-width: 600px) {
+  .conteudo-sobre .botoes-sobre-mim {
+    flex-direction: column;
+  }
 
-nav ul {
-  display: flex;
-}
+  .conteudo-home .botoes {
+    flex-direction: column;
+  }
 
-nav ul li {
-  list-style: none;
-  margin: 10px 30px;
-}
+  .conteudo-home .botoes #projetos-button {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+    padding: 8px 36%;
+  }
 
-nav ul li::after {
-  content: "";
-  display: block;
-  border-bottom: 4px solid #a45cff;
-  margin-top: 5px;
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
-}
+  .conteudo-home .botoes-sociais {
+    justify-content: space-between;
+    width: 100%;
+  }
 
-nav ul li:hover::after {
-  transform: scaleX(1);
+  .conteudo-home .botoes-sociais a img {
+    width: 90%;
+  }
+
+  #home #detalhe-rh-inferior {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 80%;
+  }
+
+  #detalhe-rh-superior {
+    position: absolute;
+    top: 0px;
+    right: -10px;
+    width: 80%;
+  }
+
+  #home #detalhe-direto-home {
+    display: none;
+  }
+
+  #home #detalhe-inferior-home {
+    display: none;
+  }
+
+  #home #detalhe-superior-home {
+    display: none;
+  }
+
+  .conteudo-sobre .botoes-sobre-mim a {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+    padding: 8px 40px;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .conteudo-sobre .botoes-sobre-mim a img {
+    width: 10%;
+  }
 }
