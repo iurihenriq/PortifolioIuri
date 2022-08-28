@@ -20,5 +20,28 @@ function initMenuTransition() {
   window.addEventListener('scroll', transitionMenu)
 }
 
+function mostrarFrase() {
+
+  let descTecnologias = document.querySelectorAll('.container-barra');
+  let iconTecnologias = document.querySelectorAll('.icons');
+  let inst = document.querySelector('#instrucao');
+  
+  for (let a = 0; a < iconTecnologias.length; a++) {
+
+      iconTecnologias[a].addEventListener('mouseover', () => {
+      descTecnologias[a].classList.remove('hide');
+      inst.classList.add('hide');
+
+      })
+  
+      iconTecnologias[a].addEventListener('mouseout', () => {
+      descTecnologias[a].classList.add('hide');
+      inst.classList.remove('hide');
+
+      })
+  }
+}
+
+mostrarFrase(); 
 initMenuTransition();
 initMenuMobile();

@@ -146,7 +146,7 @@ header {
   justify-content: space-around;
   gap: 66px;
   background-color: #32005c;
-  padding: 5% 10%;
+  padding: 8% 10%;
 }
 
 .background-foto {
@@ -213,22 +213,149 @@ header {
   width: 15%;
 }
 
-.conteudo-sobre .sobre-mim h2 {
-  font-size: clamp(1rem, 9vw, 2.4rem);
-}
-
 .conteudo-sobre .sobre-mim p {
   font-size: clamp(1rem, 6vw, 1.4rem);
+  line-height: 1.3;
 }
 
 #skills {
   background: #1e003a;
-  height: 50vh;
 }
+
+.conteudo-skills {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8% 10%;
+  gap: 40px;
+}
+
+.conteudo-skills #imagem-icons{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.conteudo-skills #imagem-icons div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skills-text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.skills-icons #html{
+  background-image: url(../assets/html.svg);
+}
+
+.skills-icons #html:hover{
+  background-image: url(../assets/html-colorido.svg);
+}
+
+.skills-icons #css{
+  background-image: url(../assets/css.svg);
+}
+
+.skills-icons #css:hover{
+  background-image: url(../assets/css-colorido.svg);
+}
+
+.skills-icons #js{
+  background-image: url(../assets/js.svg);
+}
+
+.skills-icons #js:hover{
+  background-image: url(../assets/js-colorido.svg);
+}
+
+.skills-icons #java{
+  background-image: url(../assets/java.svg);
+}
+
+.skills-icons #java:hover{
+  background-image: url(../assets/java-colorido.svg);
+}
+
+.skills-icons #mysql{
+  background-image: url(../assets/mysql.svg);
+}
+
+.skills-icons #mysql:hover{
+  background-image: url(../assets/mysql-colorido.svg);
+}
+
+.skills-icons #git{
+  background-image: url(../assets/git.svg);
+}
+
+.skills-icons #git:hover{
+  background-image: url(../assets/git-colorido.svg);
+}
+
+.icons {
+  width: 100px;
+  height: 100px;
+  background: #A45CFF;
+  border-radius: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+
+.icons:hover {
+  scale: 1.1;
+  background: #ededed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  transition: .3s;
+}
+
+#instrucao{
+  text-transform: uppercase;
+  color: #A45CFF;
+}
+
+.hide {
+  display: none;
+}
+
+.barra-borda {
+  border-radius: 10px;
+  background: #ededed;
+  width: 100%;
+  height: 15px;
+}
+
+.barra-progresso {
+  border-radius: 10px;
+  background: #A45CFF;
+  width: 80%;
+  height: 100%;
+}
+
+.container-barra {
+  width: 80%;
+}
+
 
 #projetos {
   background: #32005c;
   height: 50vh;
+}
+
+.titulo {
+  font-size: clamp(1rem, 9vw, 2.4rem);
 }
 
 footer {
@@ -242,7 +369,7 @@ footer {
   align-items: center;
 }
 
-.footer-flex .icons {
+.footer-flex .icons-social {
   display: flex;
   gap: 20px;
   align-items: center;
@@ -430,7 +557,7 @@ nav ul li:hover::after {
 @media screen and (max-width: 1024px) {
   .conteudo-sobre {
     display: block;
-    padding: 20% 10%;
+    padding: 20% 10% 10% 10%;
   }
 
   .logo {
@@ -448,6 +575,14 @@ nav ul li:hover::after {
 
   #home .conteudo-home {
     justify-content: center;
+  }
+
+  .conteudo-skills #imagem-icons div{
+    flex-direction: column;
+  }
+
+  .conteudo-skills #imagem-icons {
+    width: 220px;
   }
 
   nav {
@@ -509,9 +644,19 @@ nav ul li:hover::after {
     text-transform: uppercase;
     letter-spacing: 2px;
   }
+
+  
+.conteudo-skills {
+  padding: 20% 10%;
+}
 }
 
 @media (max-width: 600px) {
+  .conteudo-sobre {
+    display: block;
+    padding: 20% 10%;
+  }
+
   .conteudo-sobre .botoes-sobre-mim {
     flex-direction: column;
   }
@@ -565,9 +710,23 @@ nav ul li:hover::after {
     padding: 8px 40px;
     gap: 10px;
     justify-content: center;
+    height: 30px;
   }
 
   .conteudo-sobre .botoes-sobre-mim a img {
     width: 10%;
   }
+
+  .icons {
+    width: 80px;
+    height: 80px;
+}
+
+.conteudo-skills {
+  flex-direction: column;
+}
+
+.conteudo-skills #imagem-icons {
+  width: auto;
+}
 }
