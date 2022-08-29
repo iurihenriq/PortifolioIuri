@@ -34,9 +34,33 @@ p {
   text-decoration: none;
 }
 
+.hover-float {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hover-float:hover, .hover-float:focus, .hover-float:active {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
 footer span {
   color: #a45cff;
   font-weight: bold;
+  font-size: clamp(1rem, 6vw, 1.4rem);
+}
+
+footer p {
+  font-size: clamp(1rem, 6vw, 1.4rem);
+  text-align: center;
 }
 
 header {
@@ -169,7 +193,7 @@ header {
   text-align: justify;
 }
 
-.efeito {
+.efeito-foto {
   width: 100%;
 }
 
@@ -219,6 +243,8 @@ header {
 
 #skills {
   background: #1e003a;
+  position: relative;
+  overflow: hidden;
 }
 
 .conteudo-skills {
@@ -277,12 +303,12 @@ header {
   background-image: url(../assets/js-colorido.svg);
 }
 
-.skills-icons #java{
-  background-image: url(../assets/java.svg);
+.skills-icons #figma{
+  background-image: url(../assets/figma.svg);
 }
 
-.skills-icons #java:hover{
-  background-image: url(../assets/java-colorido.svg);
+.skills-icons #figma:hover{
+  background-image: url(../assets/figma-colorido.svg);
 }
 
 .skills-icons #mysql{
@@ -299,6 +325,17 @@ header {
 
 .skills-icons #git:hover{
   background-image: url(../assets/git-colorido.svg);
+}
+
+#skills #detalhe-inferior-skills {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 50%;
+}
+
+#skills #detalhe-esquerdo-skills {
+  display: none;
 }
 
 .icons {
@@ -323,6 +360,7 @@ header {
 #instrucao{
   text-transform: uppercase;
   color: #A45CFF;
+  text-align: center;
 }
 
 .hide {
@@ -339,8 +377,31 @@ header {
 .barra-progresso {
   border-radius: 10px;
   background: #A45CFF;
-  width: 80%;
   height: 100%;
+}
+
+.progresso-html {
+  width: 80%;
+}
+
+.progresso-css {
+  width: 75%;
+}
+
+.progresso-js {
+  width: 60%;
+}
+
+.progresso-figma {
+  width: 70%;
+}
+
+.progresso-mysql {
+  width: 75%;
+}
+
+.progresso-git {
+  width: 70%;
 }
 
 .container-barra {
@@ -355,6 +416,7 @@ header {
 
 .titulo {
   font-size: clamp(1rem, 9vw, 2.4rem);
+  padding-bottom: 20px;
 }
 
 footer {
@@ -366,6 +428,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 21px 40px;
 }
 
 .footer-flex .icons-social {
@@ -390,9 +453,38 @@ footer {
   line-height: 1.1;
 }
 
-.conteudo-home .apresentacao p:nth-child(2) {
-  font-size: clamp(1rem, 14.2vw, 4.8rem);
+.conteudo-home .apresentacao .meu-nome {
+  font-size: clamp(1rem, 13.9vw, 4.7rem);
   color: #a45cff;
+}
+
+.conteudo-home .apresentacao .input {
+  width: 3px;
+  height: clamp(1rem, 11vw, 3.3rem);
+  background-color: #ededed;
+  display: inline-block;
+  animation: blink 0.6s infinite alternate;
+}
+
+.meu-nome-input {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .conteudo-home .botoes #projetos-button {
@@ -653,6 +745,15 @@ nav ul li:hover::after {
 .conteudo-skills {
   padding: 20% 10%;
 }
+
+#skills #detalhe-inferior-skills {
+  width: 70%;
+}
+
+.footer-flex {
+  flex-direction: column;
+  padding: 21px 10px;
+}
 }
 
 @media (max-width: 600px) {
@@ -706,6 +807,14 @@ nav ul li:hover::after {
 
   #home #detalhe-superior-home {
     display: none;
+  }
+
+  #skills #detalhe-esquerdo-skills {
+    position: absolute;
+    left: -20px;
+    top: 100px;
+    width: 35%;
+    display: block;
   }
 
   .conteudo-sobre .botoes-sobre-mim a {

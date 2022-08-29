@@ -37,16 +37,19 @@
         <div class="apresentacao">
           <div class="quem-sou">
             <p>Olá, eu sou o</p>
-            <p>Iuri Henrique</p>
+            <div id="meu-nome-input">
+              <span class="meu-nome"></span>
+              <span class="input"></span>
+            </div>
             <p>Desenvolvedor Front-end</p>
           </div>
           <div class="botoes">
-            <a href="#projetos" id="projetos-button">Projetos</a>
+            <a href="#projetos" id="projetos-button" class="hover-float">Projetos</a>
 
             <div class="botoes-sociais">
-              <a href="https://github.com/iurihenriq" target="_blank"><img src="./assets/Github.svg" alt=""></a>
-              <a href="https://www.linkedin.com/in/iuri-henrique/" target="_blank"><img src="./assets/LinkedIn.svg" alt=""></a>
-              <a href="mailto:iurinhg2@gmail.com" target="_blank"><img src="./assets/Gmail.svg" alt=""></a>
+              <a href="https://github.com/iurihenriq" target="_blank" class="hover-float"><img src="./assets/Github.svg" alt=""></a>
+              <a href="https://www.linkedin.com/in/iuri-henrique/" target="_blank" class="hover-float"><img src="./assets/LinkedIn.svg" alt=""></a>
+              <a href="mailto:iurinhg2@gmail.com" target="_blank" class="hover-float"><img src="./assets/Gmail.svg" alt=""></a>
             </div>
           </div>
         </div>
@@ -78,7 +81,7 @@
             <img src="./assets/eu.png" alt="" class="eu">
           </div>
           <div class="background">
-            <img src="./assets/detalhe-sobre.svg" id="detalhe-sobre" class="efeito">
+            <img src="./assets/detalhe-sobre.svg" id="detalhe-sobre" class="efeito-foto efeito">
           </div>
         </div>
 
@@ -87,8 +90,8 @@
           <p>Tenho como objetivo aplicar minha formação de analista e desenvolvedor de sistemas na criação de soluções testáveis e de fácil entendimento. E, também, desenvolver minha carreira sob a supervisão e o estímulo da empresa, me comprometendo com as boas práticas e a inovação.
           </p>
           <div class="botoes-sobre-mim">
-            <a href="./assets/curriculo.pdf" download><img src="./assets/nuvem.png" alt="">Curriculo</a>
-            <a href="https://www.linkedin.com/in/iuri-henrique/" target="_blank"><img src="./assets/icon-linkedin.svg" alt="">LinkedIn</a>
+            <a class="hover-float" href="./assets/curriculo.pdf" download><img src="./assets/nuvem.png" alt="" >Curriculo</a>
+            <a href="https://www.linkedin.com/in/iuri-henrique/" target="_blank" class="hover-float"><img src="./assets/icon-linkedin.svg" alt="">LinkedIn</a>
           </div>
         </div>
       </div>
@@ -106,7 +109,7 @@
               <div class="icons" id="js"></div>
             </div>
             <div>
-              <div class="icons" id="java"></div>
+              <div class="icons" id="figma"></div>
               <div class="icons" id="mysql"></div>
               <div class="icons" id="git"></div>
             </div>
@@ -119,46 +122,50 @@
           <div class="hide container-barra">
             <h3>HTML</h3>
             <div class="barra-borda">
-              <div class="barra-progresso"></div>
+              <div class="barra-progresso progresso-html"></div>
             </div>
           </div>
 
           <div class="hide container-barra">
             <h3>CSS</h3>
             <div class="barra-borda">
-              <div class="barra-progresso"></div>
+              <div class="barra-progresso progresso-css"></div>
             </div>
           </div>
 
           <div class="hide container-barra">
             <h3>JS</h3>
             <div class="barra-borda">
-              <div class="barra-progresso"></div>
+              <div class="barra-progresso progresso-js"></div>
             </div>
           </div>
 
           <div class="hide container-barra">
-            <h3>JAVA</h3>
+            <h3>FIGMA</h3>
             <div class="barra-borda">
-              <div class="barra-progresso"></div>
+              <div class="barra-progresso progresso-figma"></div>
             </div>
           </div>
 
           <div class="hide container-barra">
             <h3>MYSQL</h3>
             <div class="barra-borda">
-              <div class="barra-progresso"></div>
+              <div class="barra-progresso progresso-mysql"></div>
             </div>
           </div>
 
           <div class="hide container-barra">
             <h3>GIT</h3>
             <div class="barra-borda">
-              <div class="barra-progresso"></div>
+              <div class="barra-progresso progresso-git"></div>
             </div>
           </div>
         </div>
       </div>
+
+      <img src="./assets/detalhe-inferior-skills.svg" id="detalhe-inferior-skills" class="efeito">
+      <img src="./assets/detalhe-esquerdo-skills.svg" id="detalhe-esquerdo-skills" class="efeito">
+      
     </section>
 
     <section id="projetos">
@@ -169,12 +176,9 @@
 
     <footer>
       <div class="container footer-flex">
-        <div class="icons-social">
-          <a href="https://github.com/iurihenriq" target="_blank"><img src="./assets/Github.svg" alt=""></a>
-          <a href="https://www.linkedin.com/in/iuri-henrique/" target="_blank"><img src="./assets/LinkedIn.svg" alt=""></a>
-        </div>
-        <p>Desenvolvido por <span>Iuri Henrique</span></p>
         <p>iurinhg2@gmail.com</p>
+        <p>Desenvolvido por <span>Iuri Henrique</span></p>
+        <p>Todos os direitos reservados</p>
       </div>
       <div class="detalhe-footer"></div>
     </footer>

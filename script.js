@@ -11,6 +11,21 @@ function initMenuMobile() {
 
 }
 
+function initTyping() {
+  let letter = 0;
+  const text = '     Iuri Henrique';
+
+  function typeWriter() {
+      if(letter < text.length) {
+          document.querySelector(".meu-nome").innerHTML += text.charAt(letter);
+          letter++;
+          setTimeout(typeWriter, 150)
+      }
+  }
+
+  typeWriter();
+}
+
 function initMenuTransition() {
     
   function transitionMenu() {
@@ -42,6 +57,7 @@ function mostrarFrase() {
   }
 }
 
+initTyping();
 mostrarFrase(); 
 initMenuTransition();
 initMenuMobile();
